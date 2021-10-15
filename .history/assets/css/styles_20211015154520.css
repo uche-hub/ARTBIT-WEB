@@ -692,12 +692,8 @@ nav .items .item:hover{
     -o-transform: scale(0.5);
   }
   100%{
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-}
+    
+  }
 }
 
 .gallery .image span {

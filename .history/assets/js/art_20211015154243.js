@@ -155,7 +155,6 @@ window.onload = () => { // once window loaded
             filterImg.forEach((image) => {
                 let filterImages = image.getAttribute("data-name");
                 if((filterImages == filterName) || filterName == "all") {
-                    image.classList.remove("hide");
                     image.classList.add("show");
                 }else {
                     image.classList.add("hide");
