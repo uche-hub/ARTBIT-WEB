@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Art Work</title>
+</head>
+
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">ARTBIT NIG LTD</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="about.html" class="nav__link">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="interiors.html" class="nav__link active-link">Interiors</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="art.html" class="nav__link">Art Works</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.html" class="nav__link">Contact Us</a>
+                    </li>
+                </ul>
+
+                <div class="nav__dark">
+                    <!-- Theme change button -->
+                    <span class="change-theme-name">Dark mode</span>
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+                </div>
+
+                <i class="ri-close-line nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-function-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="home" id="home">
+            <img src="assets/img/interiorsbg2.jpg" alt="" class="home__img">
+
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__data-subtitle">Discover all our interior designs</span>
+                    <h1 class="home__data-title">Explore The <br>Best <b>Beautiful home designs</b></h1>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--=============== ART GALLERY ===========-->
+        <section class="art section" id="art">
+            <div class="wrapper">
+                <nav>
+                    <div class="items">
+                        <span class="item active" data-name="all">All</span>
+                        <span class="item" data-name="painting">Rooms</span>
+                        <span class="item" data-name="sculptures">Funituress</span>
+                        <span class="item" data-name="metal"></span>
+                    </div>
+                </nav>
+                <!--========= FILTER IMAGE ===========-->
+                <div class="gallery">
+                    <div class="image" data-name="painting"><span><img src="/assets/img/interiors1.jpg" alt="painting 1"></span>
+                    </div>
+                    <div class="image" data-name="metal"><span><img src="/assets/img/interiors2.jpg" alt="metal 1"></span></div>
+                    <div class="image" data-name="sculptures"><span><img src="/assets/img/interiors3.jpg"
+                                alt="sculptures 1"></span></div>
+                    <div class="image" data-name="painting"><span><img src="/assets/img/interiors4.jpg" alt="painting 2"></span>
+                    </div>
+                    <div class="image" data-name="metal"><span><img src="/assets/img/interiors5.jpg" alt="metal 2"></span></div>
+                    <div class="image" data-name="sculptures"><span><img src="/assets/img/interiors6.jpg"
+                                alt="sculptures 2"></span></div>
+                    <div class="image" data-name="painting"><span><img src="/assets/img/p3.jpg" alt="painting 3"></span>
+                    </div>
+                    <div class="image" data-name="metal"><span><img src="/assets/img/m3.jpg" alt="metal 3"></span></div>
+                    <div class="image" data-name="sculptures"><span><img src="/assets/img/s3.jpg"
+                                alt="sculptures 3"></span></div>
+                    <div class="image" data-name="painting"><span><img src="/assets/img/p4.jpg" alt="painting 4"></span>
+                    </div>
+                    <div class="image" data-name="metal"><span><img src="/assets/img/m4.jpg" alt="metal 4"></span></div>
+                    <div class="image" data-name="sculptures"><span><img src="/assets/img/s4.jpg"
+                                alt="sculptures 4"></span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Screen Image Preview Box-->
+        <div class="preview-box">
+            <div class="details">
+                <span class="title">Image Category: <p>Not Defined</p></span>
+                <span class="icon ri-close-line"></span>
+            </div>
+            <div class="image-box">
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div class="shadow"></div>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div class="footer__data">
+                    <h3 class="footer__title">ARTBIT NIG LTD</h3>
+                    <p class="footer__description">You can find the most beautiful and pleasant art works and interiors
+                        prices with special discounts. We do art like painting, sculptures, metal construction. You can
+                        choose the best art
+                        that suit your home, <br> interiors that best
+                        suit your home.
+                    </p>
+                    <div>
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social">
+                            <i class="ri-facebook-box-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="footer__social">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">About</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#about" class="footer__link">About Us</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#art" class="footer__link">Art Works</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#interiors" class="footer__link">Interiors</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Full Links</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="art.html" class="footer__link">See all art works</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">See all interior decoration</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__data">
+                    <h3 class="footer__subtitle">Support</h3>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="" class="footer__link">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__rights">
+                <p class="footer__copy">&#169; 2021 ARTBIT NIG LTD. All rigths reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+
+    <!--=============== SCROLL REVEAL===============-->
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/art.js"></script>
+</body>
+
+</html>
