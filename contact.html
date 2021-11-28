@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" href="/assets/img/logo.png">
+
     <!--=============== REMIXICONS ===============-->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
@@ -19,7 +21,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <title>ARTBIT NIG LTD</title>
+    <title>CONTACT | ARTBIT</title>
   </head>
 
   <body>
@@ -30,7 +32,7 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="index.html" class="nav__link active-link">Home</a>
+              <a href="index.html" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
               <a href="about.html" class="nav__link">About</a>
@@ -39,7 +41,9 @@
               <a href="gallery.html" class="nav__link">Gallery</a>
             </li>
             <li class="nav__item">
-              <a href="contact.html" class="nav__link">Contact Us</a>
+              <a href="contact.html" class="nav__link active-link"
+                >Contact Us</a
+              >
             </li>
           </ul>
 
@@ -54,6 +58,84 @@
 
     <main class="main">
       <!--==================== HOME ====================-->
+      <section class="home contact-body" id="home">
+        <img src="assets/img/contact.jpeg" alt="" class="home__img" />
+
+        <div class="home__container container grid">
+          <div class="home__data">
+            <h1 class="home__data-title"><b>Get in touch with us</b></h1>
+          </div>
+
+          <div class="home__social">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              class="home__social-link"
+            >
+              <i class="ri-facebook-box-fill"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              class="home__social-link"
+            >
+              <i class="ri-instagram-fill"></i>
+            </a>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              class="home__social-link"
+            >
+              <i class="ri-twitter-fill"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="contact-container">
+        <form id="contact" method="post">
+          <h3>Contact Form</h3>
+          <h4>Contact us for custom quote</h4>
+          <fieldset>
+            <input
+              placeholder="Your name"
+              type="text"
+              tabindex="1"
+              required
+              autofocus
+              class="username"
+            />
+          </fieldset>
+          <fieldset>
+            <input
+              placeholder="Your Email Address"
+              type="email"
+              tabindex="2"
+              required
+              class="email"
+            />
+          </fieldset>
+          <fieldset>
+            <textarea
+              placeholder="Type your message here...."
+              tabindex="5"
+              required
+              class="message"
+            ></textarea>
+          </fieldset>
+          <fieldset>
+            <button
+              name="submit"
+              type="submit"
+              id="contact-submit"
+              data-submit="...Sending"
+              class="submit"
+            >
+              Submit
+            </button>
+          </fieldset>
+        </form>
+      </div>
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -152,5 +234,90 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+    <!-- loader -->
+    <div class="loader">
+      <img
+        src="https://media.giphy.com/media/MEiZ5h8lOkM7rwideE/giphy.gif"
+        alt=""
+      />
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript">
+      // User ID
+      // user_id
+      // Access Token
+      // random_access-token
+
+      (function () {
+        // emailjs.init("USERID");
+        emailjs.init("user_iPJG3Uj74ynDjXoDQZfOS");
+      })();
+
+      /**
+        emailjs.send("SERVICE ID", "TEMPLATE NAME", {
+          to_name: "USERNAME",
+          from_name: "FROM NAME",
+          message: "MESSAGE",
+        });
+       **/
+
+      function validate() {
+        let loader = document.querySelector(".loader");
+        let name = document.querySelector(".username");
+        let email = document.querySelector(".email");
+        let msg = document.querySelector(".message");
+        let btn = document.querySelector(".submit");
+
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (name.value == "" || email.value == "" || msg.value == "") {
+            emptyerror();
+          } else {
+            loader.style.display = "flex";
+            sendmail(name.value, email.value, msg.value);
+            success();
+            loader.style.display = "none";
+          }
+        });
+      }
+      validate();
+
+      function sendmail(name, email, msg) {
+        emailjs.send("service_czqywxf", "artbit_ID", {
+          to_name: "ndukweemeruwa@gmail.com",
+          from_name: email,
+          message: msg,
+        });
+      }
+
+      function emptyerror() {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Fields cannot be empty!",
+        });
+      }
+
+      function error() {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!",
+        });
+      }
+
+      function success() {
+        Swal.fire({
+          icon: "success",
+          title: "Success...",
+          text: "Successfully sent message",
+        });
+      }
+    </script>
   </body>
 </html>
